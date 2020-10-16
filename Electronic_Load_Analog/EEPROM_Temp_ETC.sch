@@ -1,0 +1,283 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Sensor_Temperature:PCT2075D U?
+U 1 1 5F896982
+P 2850 3200
+F 0 "U?" H 2550 3450 50  0000 C CNN
+F 1 "PCT2075D" H 3150 3450 50  0000 C CNN
+F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 2850 3200 50  0001 C CNN
+F 3 "https://www.nxp.com/docs/en/data-sheet/PCT2075.pdf" H 2850 3200 50  0001 C CNN
+	1    2850 3200
+	1    0    0    -1  
+$EndComp
+Text HLabel 2650 1250 0    50   BiDi ~ 0
+SDA
+Text HLabel 2650 1450 0    50   BiDi ~ 0
+SCL
+$Comp
+L !Seth_Components:QWIIC_Connector J?
+U 1 1 5F8A4A49
+P 9500 3250
+F 0 "J?" H 9780 3250 50  0000 L CNN
+F 1 "QWIIC_Connector" H 9780 3159 50  0000 L CNN
+F 2 "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal" H 11150 3350 50  0001 C CNN
+F 3 "~" H 9500 3250 50  0001 C CNN
+F 4 "JST" H 9850 3200 50  0001 C CNN "Mfg"
+F 5 "SM04B-SRSS-TB(LF)(SN)" H 10250 3450 50  0001 C CNN "Mfg PN"
+F 6 "455-1804-1-ND" H 10250 3250 50  0001 C CNN "Digi-Key PN"
+F 7 "" H 9500 3250 50  0001 C CNN "Mouser PN"
+	1    9500 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Memory_EEPROM:24LC256 U?
+U 1 1 5F8A5756
+P 5600 3400
+F 0 "U?" H 5300 3650 50  0000 C CNN
+F 1 "24LC256" H 5850 3650 50  0000 C CNN
+F 2 "" H 5600 3400 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/devicedoc/21203m.pdf" H 5600 3400 50  0001 C CNN
+	1    5600 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 1250 2950 1250
+Wire Wire Line
+	2650 1450 2950 1450
+Text Label 2950 1250 0    50   ~ 0
+SDA
+Text Label 2950 1450 0    50   ~ 0
+SCL
+Wire Wire Line
+	3650 3100 3250 3100
+Wire Wire Line
+	3250 3200 3650 3200
+Text Label 3650 3200 2    50   ~ 0
+SCL
+Text Label 3650 3100 2    50   ~ 0
+SDA
+Wire Wire Line
+	6400 3300 6000 3300
+Wire Wire Line
+	6000 3400 6400 3400
+Text Label 6400 3400 2    50   ~ 0
+SCL
+Text Label 6400 3300 2    50   ~ 0
+SDA
+Wire Wire Line
+	9300 3350 8900 3350
+Wire Wire Line
+	8900 3450 9300 3450
+Text Label 8900 3450 0    50   ~ 0
+SCL
+Text Label 8900 3350 0    50   ~ 0
+SDA
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5F8A7B69
+P 9200 2900
+F 0 "#PWR?" H 9200 2750 50  0001 C CNN
+F 1 "+3.3V" H 9215 3073 50  0000 C CNN
+F 2 "" H 9200 2900 50  0001 C CNN
+F 3 "" H 9200 2900 50  0001 C CNN
+	1    9200 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F8A8390
+P 9100 3550
+F 0 "#PWR?" H 9100 3300 50  0001 C CNN
+F 1 "GND" H 9105 3377 50  0000 C CNN
+F 2 "" H 9100 3550 50  0001 C CNN
+F 3 "" H 9100 3550 50  0001 C CNN
+	1    9100 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 3550 9100 3150
+Wire Wire Line
+	9100 3150 9300 3150
+Wire Wire Line
+	9300 3250 9200 3250
+Wire Wire Line
+	9200 3250 9200 2900
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5F8A8FBF
+P 5600 2850
+F 0 "#PWR?" H 5600 2700 50  0001 C CNN
+F 1 "+3.3V" H 5615 3023 50  0000 C CNN
+F 2 "" H 5600 2850 50  0001 C CNN
+F 3 "" H 5600 2850 50  0001 C CNN
+	1    5600 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5F8A9784
+P 2850 2600
+F 0 "#PWR?" H 2850 2450 50  0001 C CNN
+F 1 "+3.3V" H 2865 2773 50  0000 C CNN
+F 2 "" H 2850 2600 50  0001 C CNN
+F 3 "" H 2850 2600 50  0001 C CNN
+	1    2850 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F8A9BBA
+P 5600 3800
+F 0 "#PWR?" H 5600 3550 50  0001 C CNN
+F 1 "GND" H 5605 3627 50  0000 C CNN
+F 2 "" H 5600 3800 50  0001 C CNN
+F 3 "" H 5600 3800 50  0001 C CNN
+	1    5600 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F8A9FEE
+P 2850 3650
+F 0 "#PWR?" H 2850 3400 50  0001 C CNN
+F 1 "GND" H 2855 3477 50  0000 C CNN
+F 2 "" H 2850 3650 50  0001 C CNN
+F 3 "" H 2850 3650 50  0001 C CNN
+	1    2850 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 3650 2850 3500
+Wire Wire Line
+	5600 3100 5600 2900
+Wire Wire Line
+	5600 3800 5600 3700
+$Comp
+L power:GND #PWR?
+U 1 1 5F8AAC3B
+P 2300 3550
+F 0 "#PWR?" H 2300 3300 50  0001 C CNN
+F 1 "GND" H 2305 3377 50  0000 C CNN
+F 2 "" H 2300 3550 50  0001 C CNN
+F 3 "" H 2300 3550 50  0001 C CNN
+	1    2300 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F8AAF6A
+P 5100 3700
+F 0 "#PWR?" H 5100 3450 50  0001 C CNN
+F 1 "GND" H 5105 3527 50  0000 C CNN
+F 2 "" H 5100 3700 50  0001 C CNN
+F 3 "" H 5100 3700 50  0001 C CNN
+	1    5100 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3700 5100 3500
+Wire Wire Line
+	5100 3300 5200 3300
+Wire Wire Line
+	5200 3400 5100 3400
+Connection ~ 5100 3400
+Wire Wire Line
+	5100 3400 5100 3300
+Wire Wire Line
+	5200 3500 5100 3500
+Connection ~ 5100 3500
+Wire Wire Line
+	5100 3500 5100 3400
+Wire Wire Line
+	2450 3100 2300 3100
+Wire Wire Line
+	2300 3100 2300 3200
+Connection ~ 2300 3300
+Wire Wire Line
+	2300 3300 2300 3550
+Wire Wire Line
+	2300 3200 2450 3200
+Connection ~ 2300 3200
+Wire Wire Line
+	2300 3200 2300 3300
+Wire Wire Line
+	2300 3300 2450 3300
+$Comp
+L Device:C_Small C?
+U 1 1 5F8ACD1D
+P 3400 2650
+F 0 "C?" V 3171 2650 50  0000 C CNN
+F 1 "0.1uF" V 3262 2650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3400 2650 50  0001 C CNN
+F 3 "~" H 3400 2650 50  0001 C CNN
+	1    3400 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 2650 2850 2650
+Connection ~ 2850 2650
+Wire Wire Line
+	2850 2650 2850 2600
+$Comp
+L power:GND #PWR?
+U 1 1 5F8ADC79
+P 3550 2700
+F 0 "#PWR?" H 3550 2450 50  0001 C CNN
+F 1 "GND" H 3555 2527 50  0000 C CNN
+F 2 "" H 3550 2700 50  0001 C CNN
+F 3 "" H 3550 2700 50  0001 C CNN
+	1    3550 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 2700 3550 2650
+Wire Wire Line
+	3550 2650 3500 2650
+Wire Wire Line
+	2850 2650 2850 2900
+$Comp
+L Device:C_Small C?
+U 1 1 5F8B0724
+P 6200 2900
+F 0 "C?" V 5971 2900 50  0000 C CNN
+F 1 "0.1uF" V 6062 2900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6200 2900 50  0001 C CNN
+F 3 "~" H 6200 2900 50  0001 C CNN
+	1    6200 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F8B072B
+P 6350 2950
+F 0 "#PWR?" H 6350 2700 50  0001 C CNN
+F 1 "GND" H 6355 2777 50  0000 C CNN
+F 2 "" H 6350 2950 50  0001 C CNN
+F 3 "" H 6350 2950 50  0001 C CNN
+	1    6350 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 2950 6350 2900
+Wire Wire Line
+	6350 2900 6300 2900
+Wire Wire Line
+	5600 2900 6100 2900
+Connection ~ 5600 2900
+Wire Wire Line
+	5600 2900 5600 2850
+$EndSCHEMATC

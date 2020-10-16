@@ -28,3 +28,4 @@ fp-info-cache
 
 # PyCharm Venv
 /venv/*
+/sandbox/*
